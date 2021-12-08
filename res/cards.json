@@ -1,0 +1,29 @@
+{
+    "cards" : [
+        {
+            "name" : "basic card",
+            "rarity" : 0,
+            "description" : "funny card thing haha"
+        },
+        {
+            "name" : "uncommon card",
+            "rarity" : 1,
+            "description" : "funnier card"
+        },
+        {
+            "name" : "rare card",
+            "rarity" : 2,
+            "description" : "rare card :0"
+        },
+        {
+            "name" : "epic card",
+            "rarity" : 3,
+            "description" : "woah cool card B)"
+        },
+        {
+            "name" : "legendary card",
+            "rarity" : 4,
+            "description" : "serious card >:|"
+        }
+    ]
+}
