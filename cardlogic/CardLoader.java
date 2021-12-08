@@ -1,4 +1,9 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
 
+import org.json.*;
 
 public class CardLoader {
     final static float
@@ -8,9 +13,13 @@ public class CardLoader {
         EPIC = 0.25f,
         LEGENDARY = 0.1f;
     
-    public RandomCollection cardHeap;
+    public RandomCollection<Card> cardHeap;
 
     public static void load(String filepath){
-        
+        String jsonstring = "";
+        try (BufferedReader r = new BufferedReader(new FileReader(filepath))) {
+            while((jsonstring += r.readLine()) != null);
+        } catch (IOException e) {e.printStackTrace();}
+        System.out.print(jsonstring);
     }
 }
