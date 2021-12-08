@@ -7,4 +7,9 @@ public class Card {
         description = d;
         rarity = r;
     }
+
+    @Override
+    public String toString(){
+        return name + "\n" + description;
+    }
 }
