@@ -3,27 +3,37 @@
         {
             "name" : "basic card",
             "rarity" : 0,
-            "description" : "funny card thing haha"
+            "description" : "This is a basic card. its a unit with not a whole lot of attack power but also not a ton of defence :)",
+            "HP" : 1,
+            "POWER" : 0.5
         },
         {
             "name" : "uncommon card",
             "rarity" : 1,
-            "description" : "funnier card"
+            "description" : "This is an uncommon card. it's more of a heavy hitter than the common card, but still bad",
+            "HP" : 1,
+            "POWER" : 0.75
         },
         {
             "name" : "rare card",
             "rarity" : 2,
-            "description" : "rare card :0"
+            "description" : "rarer card, middle of the pack hp and can kill anything with a critical hit",
+            "HP" : 1,
+            "POWER" : 1.0
         },
         {
             "name" : "epic card",
             "rarity" : 3,
-            "description" : "woah cool card B)"
+            "description" : "can kill anything with a critical hit, and kill most with a normal hit",
+            "HP" : 1,
+            "POWER" : 1.5
         },
         {
             "name" : "legendary card",
             "rarity" : 4,
-            "description" : "serious card >:|"
+            "description" : "the real kind of card. very epic and cool",
+            "HP" : 2,
+            "POWER" : 2.0
         }
     ]
 }

@@ -53,7 +53,6 @@ public class Terminal {
             currentwidth += token.length() + 1;
         }
         oscanner.close();
-        System.out.println();
     }
 
     public static String getString(){
@@ -63,5 +62,14 @@ public class Terminal {
     public static void setCol(int color, boolean fill){
         int num = 30 + color + (fill ? 10 : 0);
         out.print("\u001b[" + num + "m");
+    }
+
+    public static void setStyleType(boolean bold, boolean italic, boolean underline, boolean reversed){
+        System.out.print(
+            (bold      ? "\u001b[1m" : "\u001b[22m") +
+            (italic    ? "\u001b[3m" : "\u001b[23m") +
+            (underline ? "\u001b[4m" : "\u001b[24m") +
+            (reversed  ? "\u001b[7m" : "\u001b[27m")
+        );
     }
 }

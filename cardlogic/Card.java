@@ -1,13 +1,26 @@
+package cardLogic;
+
 import IO.Terminal;
 
 public class Card {
+    private final static int[] raritycolors = {
+        Terminal.COLOR_WHITE,
+        Terminal.COLOR_BLUE,
+        Terminal.COLOR_GREEN,
+        Terminal.COLOR_MAGENTA,
+        Terminal.COLOR_YELLOW
+    };
     public String name, description;
+    public int health;
+    public float power;
     public final int rarity;
 
-    Card(String n, String d, int r){
+    Card(String n, String d, int r, float p, int h){
         name = n;
         description = d;
         rarity = r;
+        power = p;
+        health = h;
     }
 
     @Override
@@ -16,11 +29,12 @@ public class Card {
     }
 
     public void print(){
-        Terminal.setCol(Terminal.COLOR_WHITE, true);
-        Terminal.setCol(Terminal.COLOR_BLACK, false);
+        Terminal.setStyleType(true, false, false, false);
+        Terminal.setCol(raritycolors[rarity], false);
         Terminal.printWithWidth(name, 20);
-        Terminal.setCol(Terminal.COLOR_WHITE, false);
-        Terminal.setCol(Terminal.COLOR_BLACK, true);
+        System.out.println();
+        Terminal.setStyleType(false, false, false, false);
         Terminal.printWithWidth(description, 20);
+        System.out.println();
     }
 }

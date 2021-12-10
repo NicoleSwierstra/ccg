@@ -1,3 +1,5 @@
+package cardLogic;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -39,7 +41,9 @@ public class CardLoader {
             Card card = new Card(
                 jo.getString("name"), 
                 jo.getString("description"), 
-                jo.getInt("rarity")
+                jo.getInt("rarity"),
+                jo.getFloat("POWER"),
+                jo.getInt("HP")
             );
             
             cardHeap.add(card, WEIGHTS[card.rarity]);

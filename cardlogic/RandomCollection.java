@@ -10,6 +10,8 @@
     getRarity(); when fed a class, gives you where exactly that class is inside of the map (idk if this works)
 */
 
+package cardLogic;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
