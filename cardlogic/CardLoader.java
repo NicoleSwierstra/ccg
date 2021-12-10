@@ -25,6 +25,7 @@ public class CardLoader {
             while((line = r.readLine()) != null){
                 jsonstring += line.strip();
             }
+            r.close();
         } 
         catch (IOException e) {
             e.printStackTrace();
