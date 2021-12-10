@@ -19,17 +19,28 @@ public class CardLoader {
 
     public static void load(String filepath){
         String jsonstring = "";
+        
         try (BufferedReader r = new BufferedReader(new FileReader(filepath))) {
             String line;
             while((line = r.readLine()) != null){
                 jsonstring += line.strip();
             }
-        } catch (IOException e) {e.printStackTrace();}
+        } 
+        catch (IOException e) {
+            e.printStackTrace();
+        }
         
         JSONObject jsonobject = new JSONObject(jsonstring);
+        
         jsonobject.getJSONArray("cards").forEach(cardobj -> {
             JSONObject jo = (JSONObject)cardobj;
-            Card card = new Card(jo.getString("name"), jo.getString("description"), jo.getInt("rarity"));
+            
+            Card card = new Card(
+                jo.getString("name"), 
+                jo.getString("description"), 
+                jo.getInt("rarity")
+            );
+            
             cardHeap.add(card, WEIGHTS[card.rarity]);
         });
     }
